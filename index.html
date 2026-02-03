@@ -506,8 +506,7 @@
     <div class="container">
         <!-- Page 1: Welcome/Login -->
         <div id="page1" class="page active">
-            <h1>💕 Valentine's Special 💕</h1>
-            <h2>Welcome!</h2>
+            <h1>💕 Valentine's 2026 💕</h1>
 
             <div class="form-group">
                 <label for="userName">Type your name:</label>
@@ -550,7 +549,7 @@
                 </div>
                 <div class="radio-option">
                     <input type="radio" id="option3" name="dating" value="correct">
-                    <label for="option3">6 years, 34 days ✓</label>
+                    <label for="option3">6 years, 34 days</label>
                 </div>
                 <div class="radio-option">
                     <input type="radio" id="option4" name="dating" value="wrong3">
@@ -613,22 +612,19 @@
             <h2>Will you be Dobo's Valentine?</h2>
 
             <div class="image-container">
-                <img id="proposalImage" src="proposal-image.jpg" alt="Valentine's Proposal" style="display: none;" />
-                <div id="imagePlaceholder" style="padding: 60px; background: linear-gradient(135deg, #FFE4E1, #FFB6C1); border-radius: 20px; border: 5px solid #FFB6C1;">
-                    <p style="color: #FF69B4; font-size: 1.2em; font-weight: 600;">📷 Please add 'proposal-image.jpg' (beach photo)</p>
-                </div>
+                <img id="proposalImage" src="proposal-image.jpg" alt="Valentine's Proposal" />
             </div>
 
             <div class="yes-no-group">
-                <button id="yesButton" class="btn-yes btn-success">
-                    <span>Yes 💖</span>
-                </button>
                 <div class="tooltip">
                     <button id="noButton" class="btn-no disabled" disabled>
                         <span>No</span>
                     </button>
                     <span class="tooltiptext">Invalid option 😊</span>
                 </div>
+                <button id="yesButton" class="btn-yes btn-success">
+                    <span>Yes 💖</span>
+                </button>
             </div>
 
             <div class="button-group">
@@ -640,13 +636,13 @@
 
         <!-- Page 6: Final Reveal -->
         <div id="page6" class="page">
-            <h1>Happy Valentine's Day! 💕</h1>
+            <h1>Hello, my Valentine 💕</h1>
 
             <div class="final-message">
                 <p>Since this is our first Valentine's apart, let's still make it special with our virtual date!</p>
 
                 <p>Your dinner order is waiting for you at</p>
-                <div class="restaurant-name">Nasi & Mee</div>
+                <div class="restaurant-name">Nasi and Mee (Eco World)</div>
 
                 <p>Pick it up anytime after your office, just let me know that you're about to reach!</p>
 
@@ -655,10 +651,7 @@
                 </a>
 
                 <div class="image-container" style="margin-top: 30px;">
-                    <img id="finalImage" src="final-image.jpg" alt="Our Photo" style="display: none;" />
-                    <div id="finalImagePlaceholder" style="padding: 60px; background: linear-gradient(135deg, #FFE4E1, #FFB6C1); border-radius: 20px; border: 5px solid #FFB6C1;">
-                        <p style="color: #FF69B4; font-size: 1.2em; font-weight: 600;">📷 Please add 'final-image.jpg' (photo on laptop)</p>
-                    </div>
+                    <img id="finalImage" src="final-image.jpg" alt="Our Photo" />
                 </div>
 
                 <p style="font-size: 1.5em; margin-top: 30px; font-family: 'Bubblegum Sans', cursive; color: #FF1493;">
@@ -669,26 +662,6 @@
     </div>
 
     <script>
-        // Check if images exist and display them
-        function checkImage(imgId, placeholderId, imgSrc) {
-            const img = document.getElementById(imgId);
-            const placeholder = document.getElementById(placeholderId);
-
-            img.onload = function() {
-                img.style.display = 'block';
-                placeholder.style.display = 'none';
-            };
-
-            img.onerror = function() {
-                img.style.display = 'none';
-                placeholder.style.display = 'block';
-            };
-        }
-
-        // Initialize image checks
-        checkImage('proposalImage', 'imagePlaceholder', 'proposal-image.jpg');
-        checkImage('finalImage', 'finalImagePlaceholder', 'final-image.jpg');
-
         // Page navigation
         let currentPage = 1;
         let userName = '';
